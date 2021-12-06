@@ -17,7 +17,11 @@ const Users = () => {
     let lastNumber = numberString.toString().slice(-1);
     // console.log("to string", numberString, typeof numberString);
     let phrase = "";
-    if (lastNumber == "2" || lastNumber == "3" || lastNumber == "4") {
+    if (
+      (lastNumber == "2" && numberString != "12") ||
+      (lastNumber == "3" && numberString != "13") ||
+      (lastNumber == "4" && numberString != "14")
+    ) {
       phrase = "человека тусанут с тобой сегодня";
       return (
         <span className="badge  m-4 bg-primary">
